@@ -28,3 +28,4 @@ RADAR requires the reference genome and annotations listed as follows:
     SNP annotation file
 4. Alu, repetitive non-Alu, non-repetitive annotataion
 5. RNA stranded annotation
+6. Blat index
