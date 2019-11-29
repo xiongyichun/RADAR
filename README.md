@@ -19,9 +19,12 @@ RADAR itself does not require installation, just download and unzip. But it depe
 
 ## Setup
 RADAR requires the reference genome and annotations listed as follows:
-1. rDNA referenece and BWA MEM index
+1. Ribosomal DNA (rDNA) referenece and BWA MEM index
 2. reference genome, HISAT2 index, BWA MEM index
 3. SNP: dbSNP, 1000Genome, EVS
-    *
+    * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/)
+    * [The 1000 Genomes Project](https://www.internationalgenome.org/)
+    * [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/)
+    SNP annotation file
 4. Alu, repetitive non-Alu, non-repetitive annotataion
 
