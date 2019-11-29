@@ -22,6 +22,6 @@ RADAR requires the reference genome and annotations listed as follows:
 1. rDNA referenece and BWA MEM index
 2. reference genome, HISAT2 index, BWA MEM index
 3. SNP: dbSNP, 1000Genome, EVS
-
+    *
 4. Alu, repetitive non-Alu, non-repetitive annotataion
 
