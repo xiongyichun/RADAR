@@ -3,7 +3,7 @@
 
 ## Features
 * RADAR (**R**NA-editing **A**nalysis-pipeline to **D**ecode **A**ll twelve-types of **R**NA-editing events) can be conveniently applied to identify RNA-editing from RNA-seq data with stringent filtering steps.
-*  Plot function is also provided to present RNA-editing called from RADAR.
+*  Plot tools are also provided to present RNA-editing called from RADAR.
 
 ## Installation
 RADAR itself does not require installation, just download and unzip. But it depends on several tools required to be installed:
