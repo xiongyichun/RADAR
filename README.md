@@ -6,7 +6,7 @@
 *  Plot tools are also provided to present RNA-editing called from RADAR.
 
 ## Installation
-RADAR itself does not require installation, just download and unzip. But it depends on several tools required to be installed:
+RADAR can be run directly without setup process after downloaded and unzipped, only if tools it depends on have been installed:
 
 1. [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/index.shtml)
 2. [BWA (v0.7.9)](http://bio-bwa.sourceforge.net/)
@@ -29,3 +29,5 @@ RADAR requires the reference genome and annotations listed as follows:
 4. Alu, repetitive non-Alu, non-repetitive annotataion
 5. RNA stranded annotation
 6. Blat index
+7. 4bp
+
