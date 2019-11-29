@@ -10,7 +10,7 @@ RADAR itself does not require installation, just download and unzip. But it depe
 
 1. [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/index.shtml)
 2. [BWA (v0.7.9)](http://bio-bwa.sourceforge.net/)
-3. [Samtools(v1.9)](http://www.htslib.org/)
+3. [Samtools (v1.9)](http://www.htslib.org/)
 4. [GATK (v4.1.2.0)](https://software.broadinstitute.org/gatk/)
 5. [R (v3.5.1)](https://www.r-project.org)<br/>
     Dependent R packages:
@@ -18,7 +18,9 @@ RADAR itself does not require installation, just download and unzip. But it depe
     * [dplyr](https://dplyr.tidyverse.org/index.html)
 
 ## Setup
-RADAR requires the reference genome and annotation listed as follows:
-1. 
-
+RADAR requires the reference genome and annotations listed as follows:
+1. rDNA referenece and BWA MEM index
+2. reference genome, HISAT2 index, BWA MEM index
+3. SNP: dbSNP, 1000Genome, EVS
+4. Alu, repetitive non-Alu, non-repetitive annotataion
 
