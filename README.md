@@ -32,7 +32,7 @@ RADAR requires the reference genome and annotations listed as follows:
 7. 4bp
 
 ## Pipeline
-![RADAR pipeline](https://github.com/xiongyichun/RADAR/blob/master/RADAR.png)
+![RADAR pipeline](https://github.com/xiongyichun/RADAR/blob/master/RADAR.jpg)
 RADAR pipeline can break down into three main steps:
 ### STEP 1: RNA-seq read mapping
 
