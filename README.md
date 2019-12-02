@@ -37,7 +37,7 @@ RADAR pipeline can break down into three main steps:
 ### STEP 1: RNA-seq read mapping
 
 * paired end:
-```bash
+```
 
 #!/usr/bin/bash
 bash GATK_RNA_seq_HISAT2_BWA_19_9_25.sh RNA_Editing_Calling_Pipeline_HISAT2_BWA_followed_by_GATK_HaplotypeCaller -1 ${path_of_fastq1} -2 ${path_of_fastq2}  -o ${output_dir} -n ${name} -g ${ref_genome} -t ${maximum_threads}
