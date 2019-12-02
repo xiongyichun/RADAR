@@ -14,8 +14,8 @@ RADAR can be run directly without setup process after downloaded and unzipped, o
 4. [GATK (v4.1.2.0)](https://software.broadinstitute.org/gatk/)
 5. [R (v3.5.1)](https://www.r-project.org)<br/>
     Dependent R packages:
-    * [ggplot2](https://ggplot2.tidyverse.org/index.html)
-    * [dplyr](https://dplyr.tidyverse.org/index.html)
+    * [ggplot2 (v3.2.1)](https://ggplot2.tidyverse.org/index.html)
+    * [dplyr (v0.8.3)](https://dplyr.tidyverse.org/index.html)
 
 ## Setup
 RADAR requires the reference genome and annotations listed as follows:
