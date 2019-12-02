@@ -25,7 +25,6 @@ RADAR requires the reference genome and annotations listed as follows:
     * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/)
     * [The 1000 Genomes Project](https://www.internationalgenome.org/)
     * [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/)
-    SNP annotation file
 4. Alu, repetitive non-Alu, non-repetitive annotataion
 5. RNA stranded annotation
 6. Blat index
