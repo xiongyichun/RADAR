@@ -22,7 +22,8 @@ RADAR requires the reference genome and annotations listed as follows:
 1. Ribosomal DNA (rDNA) referenece and BWA MEM index
 2. reference genome, HISAT2 index, BWA MEM index
 3. GATK reference genome .dict
-java -jar CreateSequenceDictionary.jar R= Homo_sapiens_assembly18.fasta O= Homo_sapiens_assembly18.dict
+`gatk CreateSequenceDictionary -R hg38_all.fa`
+
 3. SNP annotation: dbSNP, 1000Genome, EVS
     * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/)
     * [The 1000 Genomes Project](https://www.internationalgenome.org/)
