@@ -25,7 +25,7 @@ RADAR requires the reference genome and annotations listed as follows:
 `gatk CreateSequenceDictionary -R hg38_all.fa`
 
 3. SNP annotation: dbSNP, 1000Genome, EVS
-    * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/)
+    * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) (gatk IndexFeatureFile -F NCBI_dbSNP_b151_all_hg38.vcf )
     * [The 1000 Genomes Project](https://www.internationalgenome.org/)
     * [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/)
 4. Alu, repetitive non-Alu, non-repetitive annotataion
