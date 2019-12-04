@@ -45,6 +45,7 @@ RADAR pipeline can break down into three main steps:
 #!/usr/bin/bash
 bash GATK_RNA_seq_HISAT2_BWA_19_9_25.sh RNA_Editing_Calling_Pipeline_HISAT2_BWA_followed_by_GATK_HaplotypeCaller -1 ${path_of_fastq1} -2 ${path_of_fastq2}  -o ${output_dir} -n ${name} -g ${ref_genome} -t ${maximum_threads}
 ```
+
 * single end:
 ```bash
 #!/usr/bin/bash
@@ -54,4 +55,6 @@ bash GATK_RNA_seq_HISAT2_BWA_19_9_25.sh RNA_Editing_Calling_Pipeline_HISAT2_BWA_
 ### STEP 2: RNA editing calling
 
 ### STEP 3: RNA editing visualizing
-
+1. Summarize all 12 types of RNA-editing into an Excel file
+2. Histogram plot for each treatment
+3. Manhattan plot of specific RNA-editing type 
