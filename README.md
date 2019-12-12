@@ -3,7 +3,8 @@
 ## Features
 * RADAR (**R**NA-editing **A**nalysis-pipeline to **D**ecode **A**ll twelve-types of **R**NA-editing events) can be conveniently applied to identify RNA-editing from RNA-seq data with stringent filtering steps.
 * Plot tools are also provided to present RNA-editing called from RADAR.
-##Schema
+
+## Schema
 <img src="https://github.com/xiongyichun/RADAR/blob/master/RADAR.jpg"  alt="RADAR pipeline" />
 
 ## Installation requirements
