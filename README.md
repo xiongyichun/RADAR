@@ -23,6 +23,7 @@ RADAR requires the reference genome and annotations listed as follows:
 2. reference genome, HISAT2 index, BWA MEM index
 3. GATK reference genome .dict
 `gatk CreateSequenceDictionary -R hg38_all.fa`
+`tools/ucsc/faToTwoBit hg38_all.fa hg38_all.fa.2bit`
 
 3. SNP annotation: dbSNP, 1000Genome, EVS
     * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) (gatk IndexFeatureFile -F NCBI_dbSNP_b151_all_hg38.vcf )
