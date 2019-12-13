@@ -1,8 +1,10 @@
 # RADAR
 **RADAR** is devised to detect and visualize all possible twelve-types of RNA editing events from RNA-seq datasets.
 ## Features
-* RADAR (**R**NA-editing **A**nalysis-pipeline to **D**ecode **A**ll twelve-types of **R**NA-editing events) can be conveniently applied to identify RNA-editing from RNA-seq data with stringent filtering steps.
-* Plot tools are also provided to present RNA-editing called from RADAR.
+RADAR (**R**NA-editing **A**nalysis-pipeline to **D**ecode **A**ll twelve-types of **R**NA-editing events) can be conveniently applied to identify RNA-editing from RNA-seq data with stringent filtering steps.
+* All possible RNA-editing events from each given RNA-seq dataset are summarized into an Excel file.
+* Numbers of all twelve-types of RNA editing events are plotted by histograms according to their genomic locations in Alu, repetitive non-Alu and non-repetitive regions.
+* Manhattan plots are further used to illustrate RNA editing ratios of selected types of RNA-editing events, such as C-to-U or A-to-G.
 
 ## Schema
 <img src="https://github.com/xiongyichun/RADAR/blob/master/RADAR.jpg"  alt="RADAR pipeline" />
@@ -27,7 +29,7 @@ cd RADAR
 ```
 
 ## Configuration
-RADAR requires the reference genome and annotations listed as follows:
+Reference genome, genomic sequence index for aligners and genomic annotations should be provided to RADAR in the Config.txt file:
 1. Ribosomal DNA (rDNA) referenece and BWA MEM index
 2. reference genome, HISAT2 index, BWA MEM index
 3. GATK reference genome index (.dict)
