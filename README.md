@@ -18,6 +18,7 @@ RADAR can be run directly without setup process after downloaded and unzipped, o
     Dependent R packages:
     * [ggplot2](https://ggplot2.tidyverse.org/index.html)
     * [dplyr](https://dplyr.tidyverse.org/index.html)
+    
 ## Installation
 As long as all **Installation requirements** have been fulfilled, RADAR can be run directly without setup process after downloaded and unzipped. 
 ```bash
@@ -25,13 +26,13 @@ git clone https://github.com/YangLab/RADAR
 cd RADAR
 ```
 
-## Setup
+## Configuration
 RADAR requires the reference genome and annotations listed as follows:
 1. Ribosomal DNA (rDNA) referenece and BWA MEM index
 2. reference genome, HISAT2 index, BWA MEM index
-3. GATK reference genome .dict
+3. GATK reference genome index (.dict)
 `gatk CreateSequenceDictionary -R hg38_all.fa`
-`tools/ucsc/faToTwoBit hg38_all.fa hg38_all.fa.2bit`
+3. blat index: `tools/ucsc/faToTwoBit hg38_all.fa hg38_all.fa.2bit`
 
 3. SNP annotation: dbSNP, 1000Genome, EVS
     * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) (gatk IndexFeatureFile -F NCBI_dbSNP_b151_all_hg38.vcf )
