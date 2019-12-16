@@ -26,6 +26,8 @@ As long as all **Installation requirements** have been fulfilled, RADAR can be r
 ```bash
 git clone https://github.com/YangLab/RADAR
 cd RADAR
+chmod +x RADAR
+./RADAR
 ```
 
 ## Configuration
