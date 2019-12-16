@@ -7,7 +7,7 @@ RADAR (**R**NA-editing **A**nalysis-pipeline to **D**ecode **A**ll twelve-types 
 * Manhattan plots are further used to illustrate RNA editing ratios of selected types of RNA-editing events, such as C-to-U or A-to-G.
 
 ## Schema
-<img src="https://github.com/xiongyichun/RADAR/blob/master/RADAR.jpg"  alt="RADAR pipeline" />
+<img src="https://github.com/xiongyichun/RADAR/blob/master/docs/RADAR.jpg"  alt="RADAR pipeline" />
 
 ## Installation requirements
 RADAR can be run directly without setup process after downloaded and unzipped, only if tools it depends on have been installed:
