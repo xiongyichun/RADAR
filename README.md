@@ -34,16 +34,14 @@ Reference genome, genomic sequence index for aligners and genomic annotations sh
 2. reference genome, HISAT2 index, BWA MEM index
 3. GATK reference genome index (.dict)
 `gatk CreateSequenceDictionary -R hg38_all.fa`
-3. blat index: `tools/ucsc/faToTwoBit hg38_all.fa hg38_all.fa.2bit`
-
-3. SNP annotation: dbSNP, 1000Genome, EVS
+4. Blat index: `tools/ucsc/faToTwoBit hg38_all.fa hg38_all.fa.2bit`
+5. SNP annotation: dbSNP, 1000Genome, EVS
     * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) (gatk IndexFeatureFile -F NCBI_dbSNP_b151_all_hg38.vcf )
     * [The 1000 Genomes Project](https://www.internationalgenome.org/)
     * [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/)
-4. Alu, repetitive non-Alu, non-repetitive annotataion
-5. RNA stranded annotation
-6. Blat index
-7. 4bp
+6. Alu, repetitive non-Alu, non-repetitive annotataion
+7. RNA stranded annotation
+8. 4bp
 
 ## Pipeline
 
