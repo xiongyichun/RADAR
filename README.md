@@ -55,7 +55,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
  * Example: `genome_index_bwa_mem=~/reference/Human/hg38/hg38_all.fa`
 5. Reference genome sequence index for Blat ( Example of command: tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit ) <br />
  * Example: `genome_index_blat=~/reference/Human/hg38/hg38_all.fa.2bit`
-6 Reference genome sequence index for GATK in the directory of reference genome ( Example of command: gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa ) <br />
+6. Reference genome sequence index for GATK in the directory of reference genome ( Example of command: gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa ) <br />
  * Example: `genome_index_gatk=~/reference/Human/hg38/hg38_all.dict`
 
 
@@ -75,7 +75,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format <br />
  * Example of Alu annotation: `annotation_Alu=~/annotation/Human/hg38/Alu.bed ` <br />
  * Example of repetitive non-Alu annotation: `annotation_Repetitive_non-Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed` <br />
- Example of all repetitive annotation: `annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed` <br />
+ * Example of all repetitive annotation: `annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed` <br />
 2. Annotation of RepeatMasker simple repeats from UCSC in BED format <br />
  * Example: `annotation_simple_repeats=~/annotation/Human/hg38/UCSC_RepeatMask_SimpleRepeats_hg38.bed`
 3. Annotation of splice sites from UCSC in BED format <br />
