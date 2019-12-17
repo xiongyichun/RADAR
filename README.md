@@ -72,11 +72,11 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_all_6.bed`
 
 
-## Pipeline
+## Usage
 
 RADAR pipeline can break down into three main steps:
 
-### STEP 1: RNA-seq read mapping
+#### STEP 1: RNA-seq read mapping
 
 * paired end:
 
@@ -91,9 +91,9 @@ RADAR pipeline can break down into three main steps:
 ./RADAR mapping_and_call_RNA_editing -s ${path_of_fastq} -o ${output_dir} -n ${name} -g ${ref_genome} -t ${maximum_threads}
 ```
 
-### STEP 2: RNA editing calling
+#### STEP 2: RNA editing calling
 
-### STEP 3: RNA editing visualizing
+#### STEP 3: RNA editing visualizing
 1. Summarize all 12 types of RNA-editing into an Excel file
 2. Histogram plot for each treatment
 3. Manhattan plot of specific RNA-editing type 
