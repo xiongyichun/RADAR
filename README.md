@@ -32,18 +32,7 @@ chmod +x RADAR
 
 ## Configuration
 Reference genome, genomic sequence index and genomic annotations should be provided to RADAR in the RADAR.conf file:
-1. Ribosomal DNA (rDNA) referenece and BWA MEM index
-2. reference genome, HISAT2 index, BWA MEM index
-3. GATK reference genome index (.dict)
-`gatk CreateSequenceDictionary -R hg38_all.fa`
-4. Blat index: `tools/ucsc/faToTwoBit hg38_all.fa hg38_all.fa.2bit`
-5. SNP annotation: dbSNP, 1000Genome, EVS
-    * [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) (gatk IndexFeatureFile -F NCBI_dbSNP_b151_all_hg38.vcf )
-    * [The 1000 Genomes Project](https://www.internationalgenome.org/)
-    * [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/)
-6. Alu, repetitive non-Alu, non-repetitive annotataion
-7. RNA stranded annotation
-8. 4bp
+
 #### Reference and sequence index
 1. Ribosomal DNA (rDNA) sequence index for BWA MEM ( Example of command: bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa )<br />
      * Example: `rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa`
@@ -58,8 +47,6 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 6. Reference genome sequence index for GATK in the directory of reference genome ( Example of command: gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa ) <br />
      * Example: `genome_index_gatk=~/reference/Human/hg38/hg38_all.dict`
 
-
-
 #### SNP annotation: dbSNP, 1000Genome, EVS
 1. SNP annotation from NCBI dbSNP. Both the total [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) .vcf file and folder for NCBI dbSNP divided by chromosome  <br />
      * Example of the total .vcf file: `SNP_dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf`<br />
@@ -69,7 +56,6 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example of the folder for SNP divided by chromosome: `SNP_1000Genome_divided_by_chromosome=~/annotation/Human/hg38/SNP/1000genomes/split_chr`
 3. SNP annotation from [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/) divided by chromosome <br />
      * Example of the folder for SNP divided by chromosome: `SNP_EVS_divided_by_chromosome=~/annotation/Human/hg38/SNP/EVS/split_chr`
-
 
 #### Genome annotation
 1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format <br />
@@ -84,8 +70,6 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed`
 5. Annotation of transcribed strands of genes <br />
      * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_all_6.bed`
-
-
 
 
 ## Pipeline
