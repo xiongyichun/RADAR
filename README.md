@@ -44,7 +44,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 6. Alu, repetitive non-Alu, non-repetitive annotataion
 7. RNA stranded annotation
 8. 4bp
-#### genomic sequence index for aligner
+#### Reference and sequence index
 1. Ribosomal DNA (rDNA) sequence index for BWA MEM ( Example of command: bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa )<br />
  Example: `rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa`
 2. Path to reference genome <br />
@@ -61,13 +61,13 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 
 #### SNP annotation: dbSNP, 1000Genome, EVS
-1. SNP annotation from NCBI dbSNP. Both the total NCBI dbSNP .vcf file and folder for NCBI dbSNP divided by chromosome (http://www.ncbi.nlm.nih.gov/SNP/) <br />
+1. SNP annotation from NCBI dbSNP. Both the total [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) .vcf file and folder for NCBI dbSNP divided by chromosome  <br />
  Example of the total .vcf file: `SNP_dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf`<br />
  Example of the GATK index for total .vcf (Example of command: gatk IndexFeatureFile -F \~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf ): `SNP_dbSNP_all_index_gatk=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf.idx ` <br />
  Example of the folder for NCBI dbSNP divided by chromosome: `SNP_dbSNP_divided_by_chromosome=~/annotation/Human/hg38/SNP/dbSNP_b151/split_chr`
-2. SNP annotation from The 1000 Genomes Project (https://www.internationalgenome.org/) divided by chromosome <br />
+2. SNP annotation from [The 1000 Genomes Project](https://www.internationalgenome.org/) divided by chromosome <br />
  Example of the folder for SNP divided by chromosome: `SNP_1000Genome_divided_by_chromosome=~/annotation/Human/hg38/SNP/1000genomes/split_chr`
-3. SNP annotation from The University of Washington Exome Sequencing Project (http://evs.gs.washington.edu/EVS/) divided by chromosome <br />
+3. SNP annotation from [The University of Washington Exome Sequencing Project](http://evs.gs.washington.edu/EVS/) divided by chromosome <br />
  Example of the folder for SNP divided by chromosome: `SNP_EVS_divided_by_chromosome=~/annotation/Human/hg38/SNP/EVS/split_chr`
 
 
