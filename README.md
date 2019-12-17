@@ -44,6 +44,49 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 6. Alu, repetitive non-Alu, non-repetitive annotataion
 7. RNA stranded annotation
 8. 4bp
+#### genomic sequence index for aligner
+1. Ribosomal DNA (rDNA) sequence index for BWA MEM ( Example of command: bwa index ~/reference/Human/RNA_45S5/RNA45S5.fa )
+ Example: rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa
+2. Path to reference genome
+ Example: genome_fasta=~/reference/Human/hg38/hg38_all.fa
+3. Reference genome sequence index for HISAT2 ( Example of command: hisat2-build ~/reference/Human/hg38/hg38_all.fa ~/reference/Human/hg38/hg38_all.fa )
+ Example: genome_index_hisat2=~/reference/Human/hg38/hg38_all.fa
+4. Reference genome sequence index for BWA MEM ( Example of command: bwa index ~/reference/Human/hg38/hg38_all.fa )
+ Example: genome_index_bwa_mem=~/reference/Human/hg38/hg38_all.fa
+5. Reference genome sequence index for Blat ( Example of command: tools/faToTwoBit ~/reference/Human/hg38/hg38_all.fa ~/reference/Human/hg38/hg38_all.fa.2bit )
+ Example: genome_index_blat=~/reference/Human/hg38/hg38_all.fa.2bit
+6 Reference genome sequence index for GATK in the directory of reference genome ( Example of command: gatk CreateSequenceDictionary -R ~/reference/Human/hg38/hg38_all.fa )
+ Example: genome_index_gatk=~/reference/Human/hg38/hg38_all.dict
+
+
+
+#### SNP annotation: dbSNP, 1000Genome, EVS
+1. SNP annotation from NCBI dbSNP. Both the total NCBI dbSNP .vcf file and folder for NCBI dbSNP divided by chromosome (http://www.ncbi.nlm.nih.gov/SNP/)
+ Example of the total .vcf file: SNP_dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf
+ Example of the GATK index for total .vcf: SNP_dbSNP_all_index_gatk=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf.idx ( Example of command: gatk IndexFeatureFile -F ~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf )
+ Example of the folder for NCBI dbSNP divided by chromosome: SNP_dbSNP_divided_by_chromosome=~/annotation/Human/hg38/SNP/dbSNP_b151/split_chr
+2. SNP annotation from The 1000 Genomes Project (https://www.internationalgenome.org/) divided by chromosome
+ Example of the folder for SNP divided by chromosome: SNP_1000Genome_divided_by_chromosome=~/annotation/Human/hg38/SNP/1000genomes/split_chr
+3. SNP annotation from The University of Washington Exome Sequencing Project (http://evs.gs.washington.edu/EVS/) divided by chromosome
+ Example of the folder for SNP divided by chromosome: SNP_EVS_divided_by_chromosome=~/annotation/Human/hg38/SNP/EVS/split_chr
+
+
+#### Genome annotation
+1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format
+ Example of Alu annotation: annotation_Alu=~/annotation/Human/hg38/Alu.bed 
+ Example of repetitive non-Alu annotation: annotation_Repetitive_non-Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed
+ Example of all repetitive annotation: annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed
+2. Annotation of RepeatMasker simple repeats from UCSC in BED format
+ Example: annotation_simple_repeats=~/annotation/Human/hg38/UCSC_RepeatMask_SimpleRepeats_hg38.bed
+3. Annotation of splice sites from UCSC in BED format
+ Example: annotation_splice_sites=~/annotation/Human/hg38/ref_all_spsites_hg38.bed
+4. Annotation of intronic 4 bp
+ Example: annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed
+5. Annotation of transcribed strands of genes
+ Example: annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_all_6.bed
+
+
+
 
 ## Pipeline
 
