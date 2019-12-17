@@ -31,7 +31,7 @@ chmod +x RADAR
 ```
 
 ## Configuration
-Reference genome, genomic sequence index and genomic annotations should be provided to RADAR in the Config.txt file:
+Reference genome, genomic sequence index and genomic annotations should be provided to RADAR in the RADAR.conf file:
 1. Ribosomal DNA (rDNA) referenece and BWA MEM index
 2. reference genome, HISAT2 index, BWA MEM index
 3. GATK reference genome index (.dict)
