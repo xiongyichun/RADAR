@@ -62,7 +62,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 #### SNP annotation: dbSNP, 1000Genome, EVS
 1. SNP annotation from NCBI dbSNP. Both the total NCBI dbSNP .vcf file and folder for NCBI dbSNP divided by chromosome (http://www.ncbi.nlm.nih.gov/SNP/) <br />
- Example of the total .vcf file: `SNP_dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf`
+ Example of the total .vcf file: `SNP_dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf`<br />
  Example of the GATK index for total .vcf: `SNP_dbSNP_all_index_gatk=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf.idx `( Example of command: gatk IndexFeatureFile -F \~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf ) <br />
  Example of the folder for NCBI dbSNP divided by chromosome: `SNP_dbSNP_divided_by_chromosome=~/annotation/Human/hg38/SNP/dbSNP_b151/split_chr`
 2. SNP annotation from The 1000 Genomes Project (https://www.internationalgenome.org/) divided by chromosome <br />
@@ -73,9 +73,9 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 #### Genome annotation
 1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format <br />
- Example of Alu annotation: `annotation_Alu=~/annotation/Human/hg38/Alu.bed `
- Example of repetitive non-Alu annotation: `annotation_Repetitive_non-Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed`
- Example of all repetitive annotation: `annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed`
+ Example of Alu annotation: `annotation_Alu=~/annotation/Human/hg38/Alu.bed ` <br />
+ Example of repetitive non-Alu annotation: `annotation_Repetitive_non-Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed` <br />
+ Example of all repetitive annotation: `annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed` <br />
 2. Annotation of RepeatMasker simple repeats from UCSC in BED format <br />
  Example: `annotation_simple_repeats=~/annotation/Human/hg38/UCSC_RepeatMask_SimpleRepeats_hg38.bed`
 3. Annotation of splice sites from UCSC in BED format <br />
