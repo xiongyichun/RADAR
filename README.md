@@ -81,9 +81,9 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 3. Annotation of splice sites from UCSC in BED format
  Example: annotation_splice_sites=\~/annotation/Human/hg38/ref_all_spsites_hg38.bed
 4. Annotation of intronic 4 bp
- Example: annotation_intronic_4site=\~/annotation/Human/hg38/hg38_intronic_4site.bed
+ Example: `annotation_intronic_4site=\~/annotation/Human/hg38/hg38_intronic_4site.bed`
 5. Annotation of transcribed strands of genes
- Example: annotation_gene_transcribed_strands=\~/annotation/Human/hg38/ref_all_6.bed
+ Example: `annotation_gene_transcribed_strands=\~/annotation/Human/hg38/ref_all_6.bed`
 
 
 
