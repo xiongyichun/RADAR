@@ -46,9 +46,9 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 8. 4bp
 #### Reference and sequence index
 1. Ribosomal DNA (rDNA) sequence index for BWA MEM ( Example of command: bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa )<br />
- * Example: `rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa`
+     * Example: `rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa`
 2. Path to reference genome <br />
- * Example: `genome_fasta=~/reference/Human/hg38/hg38_all.fa`
+     * Example: `genome_fasta=~/reference/Human/hg38/hg38_all.fa`
 3. Reference genome sequence index for HISAT2 ( Example of command: hisat2-build \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa ) <br />
  * Example: `genome_index_hisat2=~/reference/Human/hg38/hg38_all.fa`
 4. Reference genome sequence index for BWA MEM ( Example of command: bwa index \~/reference/Human/hg38/hg38_all.fa ) <br />
