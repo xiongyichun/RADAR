@@ -76,20 +76,22 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 RADAR pipeline can break down into three main steps:
 
-#### STEP 1: RNA-seq read mapping
-
+#### STEP 1: Read mapping and RNA-editing calling
 * paired end:
-
-```bash
-#!/usr/bin/bash
-./RADAR mapping_and_call_RNA_editing -1 ${path_of_fastq1} -2 ${path_of_fastq2}  -o ${output_dir} -n ${name} -g ${ref_genome} -t ${maximum_threads}
-```
+COMMAND: `./RADAR mapping_and_call_RNA_editing -1 full_path_of_fastq1 -2 full_path_of_fastq2 --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads `
 
 * single end:
-```bash
-#!/usr/bin/bash
-./RADAR mapping_and_call_RNA_editing -s ${path_of_fastq} -o ${output_dir} -n ${name} -g ${ref_genome} -t ${maximum_threads}
-```
+COMMAND: `./RADAR mapping_and_call_RNA_editing -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
+
+`-s | --single | -single`: 
+fasta file for the single-end RNA-seq data.
+-1 | --fq1 | -fq1  and  -2 | --fq2 | -fq2: fasta file for the paired-end RNA-seq data.
+--stranded | -stranded: if the RNA-seq is stranded or not. value: true or false.
+-t | --thread | -thread: maximum threads used for computation.
+-o | --outdir | -outdir: output directory of the results.
+-n | --outname | -outname: the prefix of file name for the RNA-editing results.
+-g | --genome_build_version | -genome_build_version: genome build version of the reference genome.
+-h | --help | -help: print help information.
 
 #### STEP 2: RNA editing calling
 
