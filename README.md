@@ -83,14 +83,14 @@ COMMAND: `./RADAR mapping_and_call_RNA_editing -1 full_path_of_fastq1 -2 full_pa
 * single end:
 COMMAND: `./RADAR mapping_and_call_RNA_editing -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
 ##### Options
-`-s | --single | -single`: Fasta file for the single-end RNA-seq data.
-`-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: fasta file for the paired-end RNA-seq data.
-`--stranded | -stranded`: if the RNA-seq is stranded or not. value: true or false.
-`-t | --thread | -thread`: maximum threads used for computation.
-`-o | --outdir | -outdir`: output directory of the results.
-`-n | --outname | -outname`: the prefix of file name for the RNA-editing results.
-`-g | --genome_build_version | -genome_build_version`: genome build version of the reference genome.
-`-h | --help | -help`: print help information.
+`-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
+`-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: fasta file for the paired-end RNA-seq data. <br />
+`--stranded | -stranded`: if the RNA-seq is stranded or not. value: true or false. <br />
+`-t | --thread | -thread`: maximum threads used for computation. <br />
+`-o | --outdir | -outdir`: output directory of the results. <br />
+`-n | --outname | -outname`: the prefix of file name for the RNA-editing results. <br />
+`-g | --genome_build_version | -genome_build_version`: genome build version of the reference genome. <br />
+`-h | --help | -help`: print help information. <br />
 
 #### STEP 2: RNA editing calling
 
