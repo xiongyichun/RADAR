@@ -77,10 +77,9 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 RADAR pipeline can break down into three main steps:
 
 ### STEP 1: Read mapping and RNA-editing calling
-* paired end:
+* paired-end RNA-seq data:
 COMMAND: `./RADAR mapping_and_call_RNA_editing -1 full_path_of_fastq1 -2 full_path_of_fastq2 --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads `
-
-* single end:
+* single-end RNA-seq data:
 COMMAND: `./RADAR mapping_and_call_RNA_editing -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
 ##### Options
 `-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
@@ -92,9 +91,9 @@ COMMAND: `./RADAR mapping_and_call_RNA_editing -s full_path_of_fastq --stranded 
 `-g | --genome_build_version | -genome_build_version`: genome build version of the reference genome. <br />
 `-h | --help | -help`: print help information. <br />
 
-#### STEP 2: RNA editing calling
+### STEP 2: preparation for visualization
 
-#### STEP 3: RNA editing visualizing
+### STEP 3: RNA-editing visualization
 1. Summarize all 12 types of RNA-editing into an Excel file
 2. Histogram plot for each treatment
 3. Manhattan plot of specific RNA-editing type 
