@@ -77,10 +77,10 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 RADAR pipeline can break down into three main steps:
 
 ### STEP 1: Read mapping and RNA-editing calling
-* paired-end RNA-seq data:
-COMMAND: `./RADAR mapping_and_call_RNA_editing -1 full_path_of_fastq1 -2 full_path_of_fastq2 --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads `
-* single-end RNA-seq data:
-COMMAND: `./RADAR mapping_and_call_RNA_editing -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
+* For paired-end RNA-seq data:
+COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 full_path_of_fastq1 -2 full_path_of_fastq2 --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads `
+* For single-end RNA-seq data:
+COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
 ##### Options
 `-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
 `-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: fasta file for the paired-end RNA-seq data. <br />
@@ -92,8 +92,22 @@ COMMAND: `./RADAR mapping_and_call_RNA_editing -s full_path_of_fastq --stranded 
 `-h | --help | -help`: print help information. <br />
 
 ### STEP 2: preparation for visualization
+COMMAND: `./RADAR preparation_for_visualization -i outdir_of_read_mapping_and_RNA_editing_calling `
+`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.
+`-h | --help | -help`: print help information.
 
 ### STEP 3: RNA-editing visualization
-1. Summarize all 12 types of RNA-editing into an Excel file
-2. Histogram plot for each treatment
-3. Manhattan plot of specific RNA-editing type 
+1. Histogram plot for each treatment
+COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling --outname_of_replicates outname_of_replicates -o full_path_of_plot `
+`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.
+`--outname_of_replicates | -outname_of_replicates`: the prefix of file name for the RNA-editing results for each replicates from the same treatment .
+`-o | --output | -output`: full path of the output file for the histogram.
+`-h | --help | -help`: print help information.
+
+2. Manhattan plot of specific RNA-editing type 
+COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling - `
+`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.
+`--outname_of_samples | -outname_of_samples`: outname of samples for plot.
+`--color_of_samples | -color_of_samples`: dot color of samples for plot.
+`-o | --output | -output`: full path of the output file for the Manhattan plot.
+`-h | --help | -help`: print help information.
