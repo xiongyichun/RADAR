@@ -92,22 +92,22 @@ COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s full_path_of_fastq --s
 `-h | --help | -help`: print help information. <br />
 
 ### STEP 2: preparation for visualization
-COMMAND: `./RADAR preparation_for_visualization -i outdir_of_read_mapping_and_RNA_editing_calling `
-`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.
-`-h | --help | -help`: print help information.
+COMMAND: `./RADAR preparation_for_visualization -i outdir_of_read_mapping_and_RNA_editing_calling ` <br />
+`-i | --inputdir | -inputdir`: the directory of the RNA-editing results. <br />
+`-h | --help | -help`: print help information. <br />
 
 ### STEP 3: RNA-editing visualization
 1. Histogram plot for each treatment
-COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling --outname_of_replicates outname_of_replicates -o full_path_of_plot `
-`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.
-`--outname_of_replicates | -outname_of_replicates`: the prefix of file name for the RNA-editing results for each replicates from the same treatment .
-`-o | --output | -output`: full path of the output file for the histogram.
-`-h | --help | -help`: print help information.
+COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling --outname_of_replicates outname_of_replicates -o full_path_of_plot `  <br />
+`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.  <br />
+`--outname_of_replicates | -outname_of_replicates`: the prefix of file name for the RNA-editing results for each replicates from the same treatment.  <br />
+`-o | --output | -output`: full path of the output file for the histogram. <br />
+`-h | --help | -help`: print help information.  <br />
 
 2. Manhattan plot of specific RNA-editing type 
-COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling - `
-`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.
-`--outname_of_samples | -outname_of_samples`: outname of samples for plot.
-`--color_of_samples | -color_of_samples`: dot color of samples for plot.
-`-o | --output | -output`: full path of the output file for the Manhattan plot.
-`-h | --help | -help`: print help information.
+COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling - `  <br />
+`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.  <br />
+`--outname_of_samples | -outname_of_samples`: outname of samples for plot.  <br />
+`--color_of_samples | -color_of_samples`: dot color of samples for plot.  <br />
+`-o | --output | -output`: full path of the output file for the Manhattan plot.  <br />
+`-h | --help | -help`: print help information.  <br />
