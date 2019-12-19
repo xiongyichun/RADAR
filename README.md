@@ -77,9 +77,9 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 RADAR pipeline can break down into three main steps:
 
 ### STEP 1: Read mapping and RNA-editing calling
-* For paired-end RNA-seq data:
+* For paired-end RNA-seq data: <br />
 COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 full_path_of_fastq1 -2 full_path_of_fastq2 --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads `
-* For single-end RNA-seq data:
+* For single-end RNA-seq data: <br />
 COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
 ##### Options
 `-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
