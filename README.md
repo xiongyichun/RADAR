@@ -34,17 +34,19 @@ chmod +x RADAR
 Reference genome, genomic sequence index and genomic annotations should be provided to RADAR within the **RADAR.conf** file:
 
 #### Reference and sequence index
-1. Ribosomal DNA (rDNA) sequence index for BWA MEM, which can be created by command "bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa" <br />
+1. Genome build version of the reference genome. <br />
+    * Example: `genome_build_version=hg38`
+2. Ribosomal DNA (rDNA) sequence index for BWA MEM, which can be created by command "bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa" <br />
      * Example: `rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa`
-2. Path to reference genome <br />
+3. Path to reference genome <br />
      * Example: `genome_fasta=~/reference/Human/hg38/hg38_all.fa`
-3. Reference genome sequence index for HISAT2, which can be created by command "hisat2-build \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa" <br />
+4. Reference genome sequence index for HISAT2, which can be created by command "hisat2-build \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_hisat2=~/reference/Human/hg38/hg38_all.fa`
-4. Reference genome sequence index for BWA MEM, which can be created by command "bwa index \~/reference/Human/hg38/hg38_all.fa" <br />
+5. Reference genome sequence index for BWA MEM, which can be created by command "bwa index \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_bwa_mem=~/reference/Human/hg38/hg38_all.fa`
-5. Reference genome sequence index for Blat, which can be created by command "RADAR/tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit" <br />
+6. Reference genome sequence index for Blat, which can be created by command "RADAR/tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit" <br />
      * Example: `genome_index_blat=~/reference/Human/hg38/hg38_all.fa.2bit`
-6. Reference genome sequence index for GATK in the directory of reference genome, which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
+7. Reference genome sequence index for GATK in the directory of reference genome, which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_gatk=~/reference/Human/hg38/hg38_all.dict`
 
 #### SNP annotation: dbSNP, 1000Genome, EVS
@@ -78,28 +80,27 @@ RADAR pipeline can break down into three main steps:
 
 ### STEP 1: Read mapping and RNA-editing calling
 * For paired-end RNA-seq data: <br />
-COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 full_path_of_fastq1 -2 full_path_of_fastq2 --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads `
+COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 "full_path_of_fastq1" -2 "full_path_of_fastq2" --stranded "true/false"  -o "output_dir" -n "outname"  -t "maximum_threads" `
 * For single-end RNA-seq data: <br />
-COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
+COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s "full_path_of_fastq" --stranded "true/false"  -o "output_dir" -n "outname" -t "maximum_threads"  `
 ##### Options
 `-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
 `-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: Fasta file for the paired-end RNA-seq data. <br />
 `--stranded | -stranded`: If the RNA-seq is stranded or not. value: true or false. <br />
-`-t | --thread | -thread`: Maximum threads used for computation. <br />
-`-o | --outdir | -outdir`: Output directory of the results. <br />
 `-n | --outname | -outname`: The prefix of file name for the RNA-editing results. <br />
-`-g | --genome_build_version | -genome_build_version`: Genome build version of the reference genome. <br />
+`-o | --outdir | -outdir`: Output directory of the results. <br />
+`-t | --thread | -thread`: Maximum threads used for computation. <br />
 `-h | --help | -help`: Print help information. <br />
 
 ### STEP 2: preparation for visualization
-COMMAND: `./RADAR preparation_for_visualization -i outdir_of_read_mapping_and_RNA_editing_calling ` <br />
+COMMAND: `./RADAR preparation_for_visualization -i "outdir_of_read_mapping_and_RNA_editing_calling" ` <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results. <br />
 `-h | --help | -help`: Print help information. <br />
 
 ### STEP 3: RNA-editing visualization
 #### 1. Histogram plot for each treatment
-COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling -o path_of_plot  --outname_of_replicates outname_of_replicates `  <br />
+COMMAND: `./RADAR histogram -i "outdir_of_read_mapping_and_RNA_editing_calling" -o "path_of_plot"  --outname_of_replicates "outname_of_replicates" `  <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
 `-o | --output | -output`: Full path of the pdf file for the histogram. <br />
@@ -107,7 +108,7 @@ COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling -o
 `-h | --help | -help`: Print help information.  <br />
 
 #### 2. Manhattan plot of specific RNA-editing type 
-COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling -o path_of_plot --outname_of_samples outname_of_samples_to_plot --color_of_samples colors_of_samples_in_the_plot`  <br />
+COMMAND: `./RADAR Manhattan_plot -i "outdir_of_read_mapping_and_RNA_editing_calling" -o "path_of_plot" --outname_of_samples "outname_of_samples_to_plot" --color_of_samples "colors_of_samples_in_the_plot" `  <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
 `-o | --output | -output`: Full path of the pdf file for the Manhattan plot.  <br />
