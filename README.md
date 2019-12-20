@@ -107,7 +107,7 @@ COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling -o
 `-h | --help | -help`: Print help information.  <br />
 
 #### 2. Manhattan plot of specific RNA-editing type 
-COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling -o path_of_the_plot --outname_of_samples outname_of_samples_to_plot --color_of_samples colors_of_samples_in_the_plot`  <br />
+COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling -o path_of_plot --outname_of_samples outname_of_samples_to_plot --color_of_samples colors_of_samples_in_the_plot`  <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
 `-o | --output | -output`: Full path of the pdf file for the Manhattan plot.  <br />
