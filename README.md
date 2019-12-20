@@ -99,7 +99,7 @@ COMMAND: `./RADAR preparation_for_visualization -i outdir_of_read_mapping_and_RN
 
 ### STEP 3: RNA-editing visualization
 #### 1. Histogram plot for each treatment
-COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling --outname_of_replicates outname_of_replicates -o full_path_of_plot `  <br />
+COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling -o path_of_plot  --outname_of_replicates outname_of_replicates `  <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
 `-o | --output | -output`: Full path of the pdf file for the histogram. <br />
