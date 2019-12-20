@@ -34,23 +34,23 @@ chmod +x RADAR
 Reference genome, genomic sequence index and genomic annotations should be provided to RADAR within the **RADAR.conf** file:
 
 #### Reference and sequence index
-1. Ribosomal DNA (rDNA) sequence index for BWA MEM ( Example of command: bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa )<br />
+1. Ribosomal DNA (rDNA) sequence index for BWA MEM, which can be created by command "bwa index \~/reference/Human/RNA_45S5/RNA45S5.fa" <br />
      * Example: `rDNA_idnex_bwa_mem=~/reference/Human/RNA_45S5/RNA45S5.fa`
 2. Path to reference genome <br />
      * Example: `genome_fasta=~/reference/Human/hg38/hg38_all.fa`
-3. Reference genome sequence index for HISAT2 ( Example of command: hisat2-build \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa ) <br />
+3. Reference genome sequence index for HISAT2, which can be created by command "hisat2-build \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_hisat2=~/reference/Human/hg38/hg38_all.fa`
-4. Reference genome sequence index for BWA MEM ( Example of command: bwa index \~/reference/Human/hg38/hg38_all.fa ) <br />
+4. Reference genome sequence index for BWA MEM, which can be created by command "bwa index \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_bwa_mem=~/reference/Human/hg38/hg38_all.fa`
-5. Reference genome sequence index for Blat ( Example of command: tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit ) <br />
+5. Reference genome sequence index for Blat, which can be created by command "RADAR/tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit" <br />
      * Example: `genome_index_blat=~/reference/Human/hg38/hg38_all.fa.2bit`
-6. Reference genome sequence index for GATK in the directory of reference genome ( Example of command: gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa ) <br />
+6. Reference genome sequence index for GATK in the directory of reference genome, which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_gatk=~/reference/Human/hg38/hg38_all.dict`
 
 #### SNP annotation: dbSNP, 1000Genome, EVS
 1. SNP annotation from NCBI dbSNP. Both the total [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) .vcf file and folder for NCBI dbSNP divided by chromosome  <br />
      * Example of the total .vcf file: `SNP_dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf`<br />
-     * Example of the GATK index for total .vcf (Example of command: gatk IndexFeatureFile -F \~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf ): `SNP_dbSNP_all_index_gatk=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf.idx ` <br />
+     * Example of the GATK index for total .vcf: `SNP_dbSNP_all_index_gatk=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf.idx `, which can be created by command "gatk IndexFeatureFile -F \~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf" <br />
      * Example of the folder for NCBI dbSNP divided by chromosome: `SNP_dbSNP_divided_by_chromosome=~/annotation/Human/hg38/SNP/dbSNP_b151/split_chr`
 2. SNP annotation from [The 1000 Genomes Project](https://www.internationalgenome.org/) divided by chromosome <br />
      * Example of the folder for SNP divided by chromosome: `SNP_1000Genome_divided_by_chromosome=~/annotation/Human/hg38/SNP/1000genomes/split_chr`
