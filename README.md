@@ -112,7 +112,7 @@ COMMAND: `./RADAR Manhattan_plot -i "outdir_of_read_mapping_and_RNA_editing_call
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
 `-o | --output | -output`: Full path of the pdf file for the Manhattan plot.  <br />
-`--RNA_editing_type | -RNA_editing_type`: Interested RNA-editing type for the Manhattan plot. For example, C-to-U or A-to-G.
+`--RNA_editing_type | -RNA_editing_type`: Interested RNA-editing type for the Manhattan plot. For example, C-to-U or A-to-G. <br />
 `--outname_of_samples | -outname_of_samples`: Outname of samples to plot. The separator between outnames should be comma. <br />
 `--color_of_samples | -color_of_samples`: Color of hex RGB format for the dot of samples in the plot. Each color should be within double quotations, started with pound sign (#) and seperated by comma (,). For example, "#919191","#919191","#FF3F00","#FF3F00","#FF3F00". <br />
 `-h | --help | -help`: Print help information.  <br />
