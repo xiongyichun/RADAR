@@ -83,31 +83,31 @@ COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 full_path_of_fastq1 -2
 COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s full_path_of_fastq --stranded true/false  -o output_dir -n outname -g genome_build_version -t maximum_threads  `
 ##### Options
 `-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
-`-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: fasta file for the paired-end RNA-seq data. <br />
-`--stranded | -stranded`: if the RNA-seq is stranded or not. value: true or false. <br />
-`-t | --thread | -thread`: maximum threads used for computation. <br />
-`-o | --outdir | -outdir`: output directory of the results. <br />
-`-n | --outname | -outname`: the prefix of file name for the RNA-editing results. <br />
-`-g | --genome_build_version | -genome_build_version`: genome build version of the reference genome. <br />
-`-h | --help | -help`: print help information. <br />
+`-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: Fasta file for the paired-end RNA-seq data. <br />
+`--stranded | -stranded`: If the RNA-seq is stranded or not. value: true or false. <br />
+`-t | --thread | -thread`: Maximum threads used for computation. <br />
+`-o | --outdir | -outdir`: Output directory of the results. <br />
+`-n | --outname | -outname`: The prefix of file name for the RNA-editing results. <br />
+`-g | --genome_build_version | -genome_build_version`: Genome build version of the reference genome. <br />
+`-h | --help | -help`: Print help information. <br />
 
 ### STEP 2: preparation for visualization
 COMMAND: `./RADAR preparation_for_visualization -i outdir_of_read_mapping_and_RNA_editing_calling ` <br />
-`-i | --inputdir | -inputdir`: the directory of the RNA-editing results. <br />
-`-h | --help | -help`: print help information. <br />
+`-i | --inputdir | -inputdir`: The directory of the RNA-editing results. <br />
+`-h | --help | -help`: Print help information. <br />
 
 ### STEP 3: RNA-editing visualization
 ##### 1. Histogram plot for each treatment
 COMMAND: `./RADAR histogram -i outdir_of_read_mapping_and_RNA_editing_calling --outname_of_replicates outname_of_replicates -o full_path_of_plot `  <br />
-`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.  <br />
-`--outname_of_replicates | -outname_of_replicates`: the prefix of file name for the RNA-editing results for each replicates from the same treatment.  <br />
-`-o | --output | -output`: full path of the output file for the histogram. <br />
-`-h | --help | -help`: print help information.  <br />
+`-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
+`-o | --output | -output`: Full path of the pdf file for the histogram. <br />
+`--outname_of_replicates | -outname_of_replicates`: The prefix of file name for the RNA-editing results for each replicates from the same treatment. The separator between outnames should be comma. <br />
+`-h | --help | -help`: Print help information.  <br />
 
 ##### 2. Manhattan plot of specific RNA-editing type 
 COMMAND: `./RADAR Manhattan_plot -i outdir_of_read_mapping_and_RNA_editing_calling - `  <br />
-`-i | --inputdir | -inputdir`: the directory of the RNA-editing results.  <br />
-`--outname_of_samples | -outname_of_samples`: outname of samples for plot.  <br />
-`--color_of_samples | -color_of_samples`: dot color of samples for plot.  <br />
-`-o | --output | -output`: full path of the output file for the Manhattan plot.  <br />
-`-h | --help | -help`: print help information.  <br />
+`-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
+`-o | --output | -output`: Full path of the pdf file for the Manhattan plot.  <br />
+`--outname_of_samples | -outname_of_samples`: Outname of samples for plot. The separator between outnames should be comma. <br />
+`--color_of_samples | -color_of_samples`: Color of hex RGB format for the dot of samples in the plot. Each color should be within double quotations, started with '#' and seperated by comma. For example, "#919191","#919191","#FF3F00","#FF3F00","#FF3F00". <br />
+`-h | --help | -help`: Print help information.  <br />
