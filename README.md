@@ -76,7 +76,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 ## Usage
 
-RADAR pipeline can break down into three main steps:
+RADAR pipeline can break down into three main steps, while read mapping and RNA-editing calling are integrated into one command during operation:
 
 ### STEP 1: Read mapping and RNA-editing calling
 * For paired-end RNA-seq data: <br />
