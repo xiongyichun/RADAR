@@ -124,3 +124,11 @@ COMMAND: `./RADAR Manhattan_plot -i "outdir_of_read_mapping_and_RNA_editing_call
 `--outname_of_samples | -outname_of_samples`: Outname of samples to plot. The separator between outnames should be comma, for example, "s1_rep1,s1_rep2,s1_rep3,s2_rep1,s2_rep2,s2_rep3". <br />
 `--color_of_samples | -color_of_samples`: Color of hex RGB format for the dot of samples in the plot. Colors should be within double quotations and seperated by comma (,). For example, "#919191,#919191,#FF3F00,#FF3F00,#FF3F00". For multiple samples, provide matched colors and samples; for one sample, provide two colors to distinguish adjacent chromosomes. <br />
 `-h | --help | -help`: Print help information.  <br />
+
+## Citation
+Wang X#, Ding C#, Yu W#, Xiong YC#, He S#, Yang B#, Wang Y, Li J, Lu Z, Zhu W, Wu J, Wei J, Huang X, Liu Z*, Yang L* and Chen J*. Cas12a base editors induce efficient and specific editing with low DNA damage response. in revision.
+
+## License
+Copyright (C) 2020 YangLab.
+See the [LICENSE](https://github.com/YangLab/CIRCpseudo/blob/master/LICENSE)
+file for license rights and limitations (MIT).
