@@ -72,6 +72,15 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed`
 5. Annotation of transcribed strands of genes <br />
      * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_all_6.bed`
+     
+| Field       | Description                           |
+| :---------- | :------------------------------------ |
+| chrom       | Chromosome                            |
+| start       | Start of circular RNA                 |
+| end         | End of circular RNA                   |
+| name        | Gene symbol or gene name              |
+| score       | Flag of fusion junction realignment   |
+| strand      | + or - for strand                     |      
 
 
 ## Usage
