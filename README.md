@@ -60,6 +60,15 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example of the folder for SNP divided by chromosome: `SNP_EVS_divided_by_chromosome=~/annotation/Human/hg38/SNP/EVS/split_chr`
 
 #### Genome annotation
+All genome annotations are in BED format:
+| Field       | Description                           |
+| :---------- | :------------------------------------ |
+| chrom       | Chromosome                            |
+| start       | Start position                        |
+| end         | End position                          |
+| name        | Repeat name or gene symbol/gene name  |
+| score       | Smith Waterman alignment score for repeat region      |
+| strand      | + or - for strand                     |  
 1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format <br />
      * Example of Alu annotation: `annotation_Alu=~/annotation/Human/hg38/Alu.bed ` <br />
      * Example of repetitive non-Alu annotation: `annotation_Repetitive_non_Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed` <br />
@@ -72,15 +81,8 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed`
 5. Annotation of transcribed strands of genes <br />
      * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_all_6.bed`
-     
-| Field       | Description                           |
-| :---------- | :------------------------------------ |
-| chrom       | Chromosome                            |
-| start       | Start of circular RNA                 |
-| end         | End of circular RNA                   |
-| name        | Gene symbol or gene name              |
-| score       | Flag of fusion junction realignment   |
-| strand      | + or - for strand                     |      
+    
+    
 
 
 ## Usage
