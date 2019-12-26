@@ -61,14 +61,14 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 #### Genome annotation
 All genome annotations are in BED format:
-| Field       | Description                           |
-| :---------- | :------------------------------------ |
-| chrom       | Chromosome                            |
-| start       | Start position                        |
-| end         | End position                          |
-| name        | Repeat name or gene symbol/gene name  |
-| score       | Smith Waterman alignment score for repeat region      |
-| strand      | + or - for strand                     |  
+| Field       | Description                                      |
+| :---------- | :----------------------------------------------- |
+| chrom       | Chromosome                                       |
+| start       | Start position                                   |
+| end         | End position                                     |
+| name        | Repeat name or gene symbol/gene name             |
+| score       | Smith Waterman alignment score for repeat region |
+| strand      | + or - for strand                                |  
 1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format <br />
      * Example of Alu annotation: `annotation_Alu=~/annotation/Human/hg38/Alu.bed ` <br />
      * Example of repetitive non-Alu annotation: `annotation_Repetitive_non_Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed` <br />
