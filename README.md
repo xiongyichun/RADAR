@@ -81,7 +81,7 @@ All genome annotations are in BED format:
 3. Annotation of intronic 4 bp flanking splice sites <br />
      * Example: `annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed`
 4. Annotation of transcribed strands of genes <br />
-     * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_all_6.bed`
+     * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_UCSC_refFlat.bed`
     
     
 
