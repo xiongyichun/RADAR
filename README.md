@@ -78,9 +78,11 @@ All genome annotations are in BED format:
      * Example of all repetitive annotation: `annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed` <br />
 2. Annotation of RepeatMasker simple repeats from UCSC in BED format <br />
      * Example: `annotation_simple_repeats=~/annotation/Human/hg38/UCSC_RepeatMask_SimpleRepeats_hg38.bed`
-3. Annotation of intronic 4 bp flanking splice sites <br />
+3. Annotation of splice sites from UCSC in BED format <br />
+    * Example: `annotation_splice_sites=~/annotation/Human/hg38/ref_all_spsites_hg38.bed`
+4. Annotation of intronic 4 bp flanking splice sites <br />
      * Example: `annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed`
-4. Annotation of transcribed strands of genes <br />
+5. Annotation of transcribed strands of genes <br />
      * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_UCSC_refFlat.bed`
     
     
