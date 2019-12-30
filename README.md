@@ -31,7 +31,7 @@ chmod +x RADAR
 ```
 
 ## Configuration
-Reference genome, genomic sequence index and genomic annotations should be provided to RADAR within the **RADAR.conf** file. Examples of how to get these annotations have been provided in **RADAR/src/tools_preparation_of_RADAR_conf_annotation.sh**.
+Reference genome, genomic sequence index and genomic annotations should be provided to RADAR within the **RADAR.conf** file. Examples of how to get these annotations have been provided in **src/tools_preparation_of_RADAR_conf_annotation.sh**.
 
 #### Reference and sequence index
 1. Genome build version of the reference genome. <br />
