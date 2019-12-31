@@ -2,7 +2,7 @@
 #### Example of generating SNP annotation from NCBI dbSNP divided by chromosome 
 
 ## directory
-dir_anno=/data/rnomics5/xiongyichun/0_teacher_chenjia/0_test_RNA_public/mapping/RNA_off_target_2
+dir_anno=~
 
 ## input: reference genome fasta file
 genome_fasta=${dir_anno}/reference/Human/hg38/hg38_all.fa
@@ -12,7 +12,7 @@ dbSNP_all=${dir_anno}/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_h
 ## output: SNP from dbSNP
 SNP_dbSNP=${dir_anno}/annotation/Human/hg38/SNP/NCBI_dbSNP_b151_all_hg38_SNP.vcf
 ## output: SNP annotation from NCBI dbSNP divided by chromosome
-SNP_dbSNP_divided_by_chromosome=${dir_anno}/annotation/Human/hg38/SNP/dbSNP_b151/split_chr_test
+SNP_dbSNP_divided_by_chromosome=${dir_anno}/annotation/Human/hg38/SNP/dbSNP_b151/split_chr
 test -d ${SNP_dbSNP_divided_by_chromosome} || mkdir -p ${SNP_dbSNP_divided_by_chromosome}
 
 gatk SelectVariants -select-type SNP -R ${genome_fasta} -V  ${dbSNP_all} -O ${SNP_dbSNP}
@@ -39,9 +39,4 @@ UCSC_refFlat=UCSC_refFlat.txt
 
 cat ${UCSC_refFlat} | awk '{split($10,exonStarts,","); for(idx=1;idx<length(exonStarts);idx++){print $3"\t"(exonStarts[idx]-4)"\t"(exonStarts[idx])"\t"$2"\t0\t"$4};split($11,exonEnds,",");for(idx=1;idx<length(exonEnds);idx++){print $3"\t"(exonEnds[idx])"\t"(exonEnds[idx]+4)"\t"$2"\t0\t"$4}; }' >  ${annotation_intronic_4site}
 cat ${UCSC_refFlat} | awk '{print $3"\t"$5"\t"$6"\t"$2"\t""0\t"$4}' > ${annotation_gene_transcribed_strands}
-
-
-
-
-
 
