@@ -46,11 +46,11 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `genome_index_bwa_mem=~/reference/Human/hg38/hg38_all.fa`
 6. Reference genome sequence index for Blat, which can be created by command "RADAR/tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit" <br />
      * Example: `genome_index_blat=~/reference/Human/hg38/hg38_all.fa.2bit`
-7. Reference genome sequence index for GATK in the directory of reference genome, which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
+7. Reference genome sequence index for GATK in the same directory with reference genome, which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_gatk=~/reference/Human/hg38/hg38_all.dict`
 
 #### Variants annotation: dbSNP, 1000Genome, EVS
-1. Total variants annotation from [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/)  <br />
+1. Total variants annotation from [NCBI dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) and GATK index in the same directory.<br />
      * Example of the total .vcf file: `dbSNP_all=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf`<br />
      * Example of the GATK index for total .vcf (which can be created by command "gatk IndexFeatureFile -F \~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf"): `dbSNP_all_index_gatk=~/annotation/Human/hg38/SNP/dbSNP_b151/NCBI_dbSNP_b151_all_hg38.vcf.idx ` <br />
 2. SNP annotation from NCBI dbSNP divided by chromosome  <br />
