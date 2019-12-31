@@ -46,7 +46,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `genome_index_bwa_mem=~/reference/Human/hg38/hg38_all.fa`
 6. Reference genome sequence index for Blat, which can be created by command "RADAR/tools/faToTwoBit \~/reference/Human/hg38/hg38_all.fa \~/reference/Human/hg38/hg38_all.fa.2bit" <br />
      * Example: `genome_index_blat=~/reference/Human/hg38/hg38_all.fa.2bit`
-7. Reference genome sequence index for GATK in the same directory with reference genome, which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
+7. Reference genome sequence index for GATK in the same directory with reference genome (genome_fasta), which can be created by command "gatk CreateSequenceDictionary -R \~/reference/Human/hg38/hg38_all.fa" <br />
      * Example: `genome_index_gatk=~/reference/Human/hg38/hg38_all.dict`
 
 #### Variants annotation: dbSNP, 1000Genome, EVS
