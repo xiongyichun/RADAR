@@ -7,7 +7,7 @@ RADAR can be conveniently applied to identify RNA-editing from RNA-seq data with
 * Manhattan plots are further used to illustrate RNA editing ratios of selected types of RNA-editing events, such as C-to-U or A-to-G.
 
 ## Schema
-<img src="https://github.com/xiongyichun/RADAR/blob/master/docs/RADAR.jpg"  alt="RADAR pipeline" />
+<img src="https://github.com/YangLab/RADAR/blob/master/docs/RADAR.jpg"  alt="RADAR pipeline" />
 
 ## Installation requirements
 RADAR can be run directly without setup process after downloaded and unzipped, only if tools it depends on have been installed:
@@ -66,7 +66,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
 
 #### Genome annotation
 
-1. Annotation of Alu, repetitive non-Alu, non-repetitive genomic region in the BED format <br />
+1. Annotation of Alu, repetitive non-Alu, all repetitive genomic region in the BED format <br />
      * Example of Alu annotation: `annotation_Alu=~/annotation/Human/hg38/Alu.bed ` <br />
      * Example of repetitive non-Alu annotation: `annotation_Repetitive_non_Alu=~/annotation/Human/hg38/Repetitive_non-Alu.bed` <br />
      * Example of all repetitive annotation: `annotation_All_repetitive=~/annotation/Human/hg38/All_repetitive.bed` <br />
@@ -78,7 +78,7 @@ Reference genome, genomic sequence index and genomic annotations should be provi
      * Example: `annotation_intronic_4site=~/annotation/Human/hg38/hg38_intronic_4site.bed`
 5. Annotation of transcribed strands of genes <br />
      * Example: `annotation_gene_transcribed_strands=~/annotation/Human/hg38/ref_UCSC_refFlat.bed`
-    
+
 All genome annotations are in BED format:
 
 | Field       | Description                                      |
@@ -89,6 +89,7 @@ All genome annotations are in BED format:
 | name        | Repeat name or gene symbol/gene name             |
 | score       | Smith Waterman alignment score for repeat region |
 | strand      | + or - for strand                                |  
+    
 
 
 ## Usage
@@ -97,9 +98,9 @@ RADAR pipeline can break down into three main steps, while read mapping and RNA-
 
 ### STEP 1: Read mapping and RNA-editing calling
 * For paired-end RNA-seq data: <br />
-COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 "full_path_of_fastq1" -2 "full_path_of_fastq2" --stranded "true/false"  -o "output_dir" -n "outname"  -t "maximum_threads" `
+COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -1 "full_path_of_fastq1" -2 "full_path_of_fastq2" --stranded "true/false" -n "outname" -o "output_dir"  -t "maximum_threads" `
 * For single-end RNA-seq data: <br />
-COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s "full_path_of_fastq" --stranded "true/false"  -o "output_dir" -n "outname" -t "maximum_threads"  `
+COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s "full_path_of_fastq" --stranded "true/false" -n "outname" -o "output_dir" -t "maximum_threads"  `
 ##### Options
 `-s | --single | -single`: Fasta file for the single-end RNA-seq data. <br />
 `-1 | --fq1 | -fq1`  and  `-2 | --fq2 | -fq2`: Fasta file for the paired-end RNA-seq data. <br />
@@ -112,25 +113,25 @@ COMMAND: `./RADAR read_mapping_and_RNA_editing_calling -s "full_path_of_fastq" -
 
 ### STEP 2: RNA-editing visualization
 #### 1. Histogram plot for each treatment
-COMMAND: `./RADAR histogram -i "outdir_of_read_mapping_and_RNA_editing_calling" -o "path_of_plot"  --outname_of_replicates "outname_of_replicates" `  <br />
+COMMAND: `./RADAR histogram -i "outdir_of_read_mapping_and_RNA_editing_calling" -n "outname_of_replicates" -o "file_of_plot"  `  <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
+`-n | --outname_of_replicates | -outname_of_replicates`: The prefix of file name for the RNA-editing results for each replicates from the same treatment. The separator between outnames should be comma, for example, "s1_rep1,s1_rep2,s1_rep3". <br />
 `-o | --output | -output`: Full path of the pdf file for the histogram. <br />
-`--outname_of_replicates | -outname_of_replicates`: The prefix of file name for the RNA-editing results for each replicates from the same treatment. The separator between outnames should be comma, for example, "s1_rep1,s1_rep2,s1_rep3". <br />
 `-h | --help | -help`: Print help information.  <br />
 
 #### 2. Manhattan plot of specific RNA-editing type 
-COMMAND: `./RADAR Manhattan_plot -i "outdir_of_read_mapping_and_RNA_editing_calling" -o "path_of_plot" --RNA_editing_type "RNA_editing_type" --outname_of_samples "outname_of_samples_to_plot" --color_of_samples "colors_of_samples_in_the_plot" `  <br />
+COMMAND: `./RADAR Manhattan_plot -i "outdir_of_read_mapping_and_RNA_editing_calling" --RNA_editing_type "RNA_editing_type" -n "outname_of_samples_to_plot" -c "colors_of_samples_in_the_plot" -o "file_of_plot" `  <br />
 ##### Options
 `-i | --inputdir | -inputdir`: The directory of the RNA-editing results.  <br />
-`-o | --output | -output`: Full path of the pdf file for the Manhattan plot.  <br />
 `--RNA_editing_type | -RNA_editing_type`: Interested RNA-editing type for the Manhattan plot, which was selected from all twelve-types RNA-editing, including A-to-C, A-to-G, A-to-U, C-to-A, C-to-G, C-to-U, G-to-A, G-to-C, G-to-U, U-to-A, U-to-C, U-to-G. <br />
-`--outname_of_samples | -outname_of_samples`: Outname of samples to plot. The separator between outnames should be comma, for example, "s1_rep1,s1_rep2,s1_rep3,s2_rep1,s2_rep2,s2_rep3". <br />
-`--color_of_samples | -color_of_samples`: Color of hex RGB format for the dot of samples in the plot. Colors should be within double quotations and seperated by comma (,). For example, "#919191,#919191,#FF3F00,#FF3F00,#FF3F00". For multiple samples, provide matched colors and samples; for one sample, provide two colors to distinguish adjacent chromosomes. <br />
+`-n | --outname_of_samples | -outname_of_samples`: Outname of samples to plot. The separator between outnames should be comma, for example, "s1_rep1,s1_rep2,s1_rep3,s2_rep1,s2_rep2,s2_rep3". <br />
+`-c | --color_of_samples | -color_of_samples`: Color of hex RGB format for the dot of samples in the plot. Colors should be within double quotations and seperated by comma (,). For example, "#919191,#919191,#FF3F00,#FF3F00,#FF3F00". For multiple samples, provide matched colors and samples; for one sample, provide two colors to distinguish adjacent chromosomes. <br />
+`-o | --output | -output`: Full path of the pdf file for the Manhattan plot.  <br />
 `-h | --help | -help`: Print help information.  <br />
 
 ## Citation
 Wang X#, Ding C#, Yu W#, Xiong YC#, He S#, Yang B#, Wang Y, Li J, Lu Z, Zhu W, Wu J, Wei J, Huang X, Liu Z*, Yang L* and Chen J*. Cas12a base editors induce efficient and specific editing with low DNA damage response. in revision.
 
 ## License
-Copyright (C) 2020 YangLab. [Licensed GPLv3](https://github.com/xiongyichun/RADAR/blob/master/LICENSE) for open source use or contact YangLab (yanglab@@picb.ac.cn) for commercial use.
+Copyright (C) 2020 YangLab. [Licensed GPLv3](https://github.com/YangLab/RADAR/blob/master/LICENSE) for open source use or contact YangLab (yanglab@@picb.ac.cn) for commercial use.
